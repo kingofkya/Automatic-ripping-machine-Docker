@@ -11,10 +11,11 @@ RUN apt -y install handbrake-cli libavcodec-extra
 RUN echo 'postfix postfix/mailname string your.hostname.com' | debconf-set-selections
 RUN echo "postfix postfix/main_mailer_type string Internet Site" | debconf-set-selections
 
+
+
 RUN apt -y install abcde flac imagemagick glyrc cdparanoia
 RUN apt -y install at
 RUN apt -y install python3 python3-pip
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev
-RUN apt-get -y install libdvd-pkg
-RUN dpkg-reconfigure -y libdvd-pkg
+
 RUN apt install -y default-jre-headless
