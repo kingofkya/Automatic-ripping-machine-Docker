@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt -y update
-RUN apt-get -y install git apt-utils python-software-properties
+RUN apt-get -y install git apt-utils software-properties-common
 RUN add-apt-repository -y ppa:heyarje/makemkv-beta
 RUN add-apt-repository -y ppa:stebbins/handbrake-releases
 RUN add-apt-repository -y ppa:mc3man/bionic-prop
