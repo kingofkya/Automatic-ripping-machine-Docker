@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-
+RUN apt -y update
 RUN apt-get -y install git
 RUN add-apt-repository -y ppa:heyarje/makemkv-beta
 RUN add-apt-repository -y ppa:stebbins/handbrake-releases
