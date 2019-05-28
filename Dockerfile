@@ -8,8 +8,9 @@ RUN add-apt-repository -y ppa:mc3man/bionic-prop
 RUN apt -y update
 RUN apt -y install makemkv-bin makemkv-oss
 RUN apt -y install handbrake-cli libavcodec-extra
-RUN debconf-set-selections <<< \"postfix postfix/mailname string your.hostname.com\"
-RUN debconf-set-selections <<< \"postfix postfix/main_mailer_type string \'Internet Site\'\"
+RUN echo 'postfix postfix/mailname string your.hostname.com\' | debconf-set-selections
+RUN echo 'postfix postfix/main_mailer_type string \'Internet Site\' ' | debconf-set-selections
+
 RUN apt -y install abcde flac imagemagick glyrc cdparanoia
 RUN apt -y install at
 RUN apt -y install python3 python3-pip
