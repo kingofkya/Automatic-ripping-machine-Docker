@@ -19,3 +19,4 @@ RUN apt -y install python3 python3-pip
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev
 
 RUN apt install -y default-jre-headless
+RUN while true; do sleep 1000; done
